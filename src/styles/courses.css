@@ -1,0 +1,20 @@
+:root {
+  /* //theme */
+  --aqua-blue: #56ccf2;
+  --golden-yellow: #f2c94c;
+  --beautiful-blue: #0077be;
+  --earthy-brown: #8d6e63;
+  --leafy-green: #204e4a;
+
+  /* //theme */
+}
+
+.courses-header {
+  text-align: center;
+}
+.courses-header h3 {
+  color: var(--aqua-blue);
+}
+.courses-header h4 {
+  color: var(--aqua-blue);
+}

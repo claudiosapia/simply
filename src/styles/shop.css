@@ -1,0 +1,251 @@
+:root {
+  --aqua-blue: #56ccf2;
+  --golden-yellow: #f2c94c;
+  --beautiful-blue: #0077be;
+  --earthy-brown: #8d6e63;
+  --leafy-green: #204e4a;
+  --white: #fff;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.controls-container {
+  margin-bottom: 10vh;
+}
+
+.product-card-container {
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 0.5rem;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-top: -8px;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: filter 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.product-description {
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  color: var(--beautiful-blue);
+  text-align: center;
+}
+
+.product-ingredients {
+  margin: 0.1rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: "louis-george-cafe", sans-serif;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+
+  background-color: var(--beautiful-blue);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+
+  font-family: "Master", cursive;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn svg {
+  margin-right: 0.5rem;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--leafy-green);
+}
+
+.cart-empty {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .product-card {
+    max-width: 350px;
+  }
+
+  .product-image {
+    height: 160px;
+  }
+
+  .product-description {
+    font-size: 1.4rem;
+    color: var(--beautiful-blue);
+    font-weight: bold;
+  }
+
+  .product-ingredients {
+    font-size: 1rem;
+    color: var(--leafy-green);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .product-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--beautiful-blue) !important;
+    text-align: center;
+  }
+
+  .product-card:hover .product-description,
+  .product-card:hover .product-ingredients,
+  .product-card:hover .product-price {
+    color: var(--golden-yellow);
+  }
+
+  .product-card:hover .add-to-cart-btn {
+    background-color: var(--beautiful-blue);
+  }
+
+  .product-card:hover .add-to-cart-btn:hover {
+    background-color: var(--leafy-green);
+  }
+
+  .add-to-cart-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+.checkout-btn {
+  background-color: var(--golden-yellow);
+  color: var(--beautiful-blue);
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: var(--leafy-green);
+}
+
+.filter-sort-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filter-sort-section select,
+.filter-sort-section input[type="search"] {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.filter-sort-section select {
+  margin-right: 1rem;
+}
+
+.filter-sort-section input[type="search"] {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-sort-section input[type="search"] {
+    margin-right: 1rem;
+  }
+}
+
+/* CART */
+
+.cart-wrapper:hover {
+  display: inline-block;
+  width: 20vh;
+  height: 15vh;
+  overflow: scroll;
+  margin: 2.4rem;
+  border-radius: 4rem;
+  opacity: 1;
+  padding: 10vh auto;
+}
+
+.cart-wrapper {
+  background: var(--md-mantis);
+  display: inline-block;
+  width: 25vh;
+  height: 50vh;
+  overflow: scroll;
+  margin: 2.4rem;
+  border-radius: 4rem;
+  opacity: 1;
+  padding: 10vh auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cart-wrapper:hover {
+  display: inline-block;
+  width: 100vh;
+  height: 80vh;
+  overflow: scroll;
+  margin: 2.4rem;
+  border-radius: 4rem;
+  opacity: 1;
+  padding: 10vh auto;
+}
+
+.cart-icon-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0 1rem 0px 0px;
+  font-size: 5vh;
+}
+
+.cart-wrapper button {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+/* SHOP END */
