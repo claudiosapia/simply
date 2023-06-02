@@ -15,6 +15,11 @@ const { SubMenu } = Menu;
 const Hero = () => {
   const [menu, setMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(undefined);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -83,7 +88,14 @@ const Hero = () => {
             <Avatar
               size={{ xs: 9, sm: 24, md: 28, lg: 38, xl: 100, xxl: 56 }}
               src={icon}
+              onLoad={handleImageLoad}
+              alt="simply-logo"
             />
+            {!imageLoaded && (
+              <div className="spinner-container">
+                <div className="spinner"></div>
+              </div>
+            )}
           </div>
 
           <div className="search-bar-cont d-flex align-items-center justify-content-center ">

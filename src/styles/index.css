@@ -277,3 +277,25 @@ LOGO */
     margin-left: auto;
   }
 }
+
+/* //LOADER */
+.spinner {
+  display: flex;
+  justify-content: center;
+  border-top: 6px solid rgba(0, 0, 0, 0.2);
+  border-right: 6px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 6px solid rgba(0, 0, 0, 0.2);
+  border-left: 6px solid #000000;
+  animation: spin 1s linear infinite;
+  width: 60px; /* set the width to 60px */
+  height: 60px; /* set the height to 60px */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

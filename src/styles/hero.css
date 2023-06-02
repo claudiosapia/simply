@@ -55,10 +55,6 @@
 }
 
 @media (max-width: 750px) {
-  .hero {
-    background: url("../assets/scotland-2.jpg") no-repeat;
-    background-size: cover;
-  }
   .bg-image {
     display: block;
   }
