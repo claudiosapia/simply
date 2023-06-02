@@ -4,12 +4,6 @@ import chicken from "../assets/friedchicken-min.png";
 import electronics from "../assets/electronics-min.png";
 import furniture from "../assets/furniture-banner.png";
 
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-};
 const CarouselBanner = () => (
   <Carousel
     autoplay
@@ -19,6 +13,7 @@ const CarouselBanner = () => (
         id="1"
         className="carousel-img"
         src={banner01}
+        alt="banner image displaying produce section of grocery store"
       />
     </div>
     <div className="carousel-container">
@@ -26,6 +21,7 @@ const CarouselBanner = () => (
         id="2"
         className="carousel-img"
         src={chicken}
+        alt="banner image displaying fried chicken"
       />
     </div>
     <div className="carousel-container">
@@ -33,6 +29,7 @@ const CarouselBanner = () => (
         id="3"
         className="carousel-img"
         src={electronics}
+        alt="banner image displaying a video game controller"
       />
     </div>
     <div className="carousel-container">
@@ -40,6 +37,7 @@ const CarouselBanner = () => (
         id="4"
         className="carousel-img"
         src={furniture}
+        alt="banner image displaying a chair"
       />
     </div>
   </Carousel>

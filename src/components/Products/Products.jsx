@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Card, Col, Row, Typography, Divider, Input, Select } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons";
 import axios from "axios";
-const { Meta } = Card;
 
 const { Title, Paragraph } = Typography;
 const { Search } = Input;

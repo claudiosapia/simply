@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Typography, Button } from "antd";
 
-import CarouselBanner from "../components/CarouselBanner";
-import ImageGallerySM from "../components/ImageGallerySM";
 import Popular from "../components/Recipes/Popular";
 
 import Hero from "../components/Hero";

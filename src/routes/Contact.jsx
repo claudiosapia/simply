@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Form,
-  Input,
-  Button,
-  Radio,
-  Select,
-  DatePicker,
-  Checkbox,
-  Typography,
-  Avatar,
-} from "antd";
+import { Form, Input, Button, Radio, Checkbox, Typography, Avatar } from "antd";
 import logo from "../assets/logo.png";
 const { Title } = Typography;
 

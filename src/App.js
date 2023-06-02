@@ -61,7 +61,7 @@ const App = () => (
             <div className="footer-wrapper">
               Simply ©2023 Created by Claudio Sapia
             </div>
-            <div className="footer-wrapper">Logo created using LogoMkr</div>
+            <div className="footer-wrapper">Logo created on LogoMkr</div>
             <div className="socials">
               <TwitterOutlined />
               <FacebookOutlined />
