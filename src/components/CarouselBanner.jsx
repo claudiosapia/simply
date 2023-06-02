@@ -1,10 +1,10 @@
 import { React, useState } from "react";
 
 import { Carousel } from "antd";
-import banner01 from "../assets/banner-min.png";
-import chicken from "../assets/friedchicken-min.png";
-import electronics from "../assets/electronics-min.png";
-import furniture from "../assets/furniture-banner.png";
+import banner01 from "../assets/banner-min.jpg";
+import chicken from "../assets/friedchicken-min.jpg";
+import electronics from "../assets/electronics-min.jpg";
+import furniture from "../assets/furniture-banner.jpg";
 
 const CarouselBanner = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
