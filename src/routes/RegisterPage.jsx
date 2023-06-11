@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Checkbox, Typography } from "antd";
+import { Form, Input, Button, Typography } from "antd";
 
 const { Title } = Typography;
 
