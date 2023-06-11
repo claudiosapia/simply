@@ -1,7 +1,7 @@
 import SearchBar from "./SearchBar";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Avatar } from "antd";
+import { Menu } from "antd";
 import icon from "../assets/logo.png";
 import CarouselBanner from "./CarouselBanner";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -20,10 +20,6 @@ const Hero = () => {
   const [menu, setMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(undefined);
   const [imageLoaded, setImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -93,7 +89,6 @@ const Hero = () => {
               src={icon}
               placeholderSrc={fallback}
               effect="blur"
-              size={{ xs: 9, sm: 24, md: 28, lg: 10, xl: 100, xxl: 56 }}
               onLoad={() => setImageLoaded(true)}
               alt="simply-logo"
               wrapperClassName="logo-cont"
