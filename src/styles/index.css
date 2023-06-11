@@ -166,11 +166,12 @@ LOGO */
 /* TYPOGRAPHY  */
 
 .heading-2 {
-  font-size: 2.4rem !important;
+  font-size: 2.2rem !important;
   text-align: center; /* Center the text */
+  text-shadow: 2px 2px 2px var(--aqua-blue)!important;
 
-  font-weight: bold;
-  color: var(--beautiful-blue) !important;
+  font-weight: 400;
+  color: #2a2a2a!important;
   margin-bottom: 5vh !important;
 }
 
@@ -194,11 +195,42 @@ LOGO */
 }
 
 /* ABOUT */
-
 .about-container {
-  max-width: 90%;
-  margin: 10vh auto;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+.heading-2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.about-story {
+  padding: 10px;
+}
+
+.ant-typography {
+  font-family: Arial, sans-serif;
+}
+
+.ant-typography p {
+  margin-bottom: 20px;
+}
+
+.about-btn {
+  margin-top: 40px;
+}
+
+.about-link {
+  color: #1890ff;
+}
+
+.about-link:hover {
+  color: #40a9ff;
 }
 
 /* Footer styles */
@@ -280,8 +312,6 @@ LOGO */
 
 /* //LOADER */
 .spinner {
-  display: flex;
-  justify-content: center;
   border-top: 6px solid rgba(0, 0, 0, 0.2);
   border-right: 6px solid rgba(0, 0, 0, 0.2);
   border-bottom: 6px solid rgba(0, 0, 0, 0.2);
@@ -298,4 +328,149 @@ LOGO */
   to {
     transform: rotate(360deg);
   }
+}
+
+/* REGISTER PAGE */
+.register-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.register-input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  padding: 12px;
+}
+
+.register-btn {
+  width: 100%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+/* LOGIN */
+
+.login-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  padding: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+/* DELIVERY PASS */
+.delivery-pass-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heading-2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.delivery-pass-pricing {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.delivery-pass-option {
+  width: 45%;
+}
+
+.delivery-pass-btn {
+  margin-top: 20px;
+}
+
+.delivery-pass-benefits {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.delivery-pass-benefits li {
+  margin-bottom: 10px;
+}
+
+/* OFFERS PAGE */
+
+.offer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heading-2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.offer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.offer-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
+}
+
+.offer-btn {
+  width: 100%;
+}
+
+.offer-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.offer-discount {
+  color: #f5222d;
+}
+
+.offer-original-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+.offer-sale-price {
+  color: #52c41a;
+}
+
+.offer-rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #999;
 }

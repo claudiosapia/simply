@@ -1,13 +1,18 @@
 import React from "react";
-import { Typography } from "antd";
-import { Button } from "antd";
+import { Typography, Button } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+
 const { Paragraph, Title } = Typography;
+
 const About = () => {
   return (
     <div className="about-container">
-      <Title className="heading-2"> Welcome to Simply</Title>
+      <Title
+        level={2}
+        className="heading-2">
+        Welcome to Simply
+      </Title>
       <Paragraph>
         Simply is the 4th largest supermarket in the UK! At Simply, we believe
         that grocery shopping should be easy, affordable, and enjoyable. That's
@@ -46,7 +51,11 @@ const About = () => {
         committed to providing you with the best possible shopping experience
         and look forward to serving you both in-store and online.
       </Paragraph>
-      <Title className="heading-2">Our Story</Title>
+      <Title
+        level={2}
+        className="heading-2 about-story">
+        Our Story
+      </Title>
       <Paragraph>
         Once upon a time, in the bustling city of London, a group of
         entrepreneurs had a vision of creating a new kind of supermarket. They
@@ -78,7 +87,7 @@ const About = () => {
       <Paragraph>
         As Simply continued to grow and evolve, they never lost sight of their
         founding principles. They remained committed to providing customers with
-        a convenient, affordable, and enjoyable shopping experience, and to
+        a convenient, affordable, and enjoyable shopping experience,and to
         building long-lasting relationships with their communities.
       </Paragraph>
       <Paragraph>
@@ -89,8 +98,10 @@ const About = () => {
         grocery shopping could be simple, affordable, and enjoyable for
         everyone.
       </Paragraph>
-      <Button>
-        <Link to="/">
+      <Button className="about-btn">
+        <Link
+          to="/"
+          className="about-link">
           <HomeOutlined style={{ marginRight: "10px" }} />
           Home
         </Link>

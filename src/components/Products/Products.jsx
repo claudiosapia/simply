@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useMemo } from "react";
+import { React, useState, useEffect, useMemo } from "react";
 import { Card, Col, Row, Typography, Divider, Input, Select } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons";
 import axios from "axios";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import fallback from "../../assets/fallback.jpg";
 
 const { Title, Paragraph } = Typography;
 const { Search } = Input;
 const { Option } = Select;
-
 const Products = ({ onAdd }) => {
   // Define state variables for products and search term
   const [products, setProducts] = useState([]);
@@ -175,9 +177,11 @@ const Products = ({ onAdd }) => {
                 <Card
                   className="product-card"
                   cover={
-                    <img
-                      alt={product.product_name}
+                    <LazyLoadImage
                       src={product.image_front_url}
+                      placeholderSrc={fallback}
+                      effect="blur"
+                      alt={product.product_name}
                       className="product-image"
                     />
                   }

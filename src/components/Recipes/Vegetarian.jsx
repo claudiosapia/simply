@@ -1,33 +1,28 @@
-import { useEffect, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Typography, Card, Divider } from "antd";
 import fallback from "../../assets/fallback.jpg";
-
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-const { Paragraph, Title } = Typography;
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
+const { Paragraph, Title } = Typography;
 function Vegetarian() {
   const [vegetarian, setVegetarian] = useState([]);
+
   useEffect(() => {
     getVegetarian();
   }, []);
 
-  //if cached used cached data else fetch data from api
   const getVegetarian = async () => {
-    //check if Vegetarian saved to local storage
-
     const api = await fetch(
       `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&number=10&tags=vegetarian`
     );
     const data = await api.json();
 
-    //then back  to array
     setVegetarian(data.recipes);
   };
-  const addImageFallback = (event) => {
-    event.currentTarget.src = fallback;
-  };
+
   return (
     <>
       <div className="splider-cont">
@@ -43,10 +38,10 @@ function Vegetarian() {
             drag: "free",
             arrows: false,
             pagination: false,
-            perPage: 4, // Display 4 cards per slide
+            perPage: 4,
             breakpoints: {
-              1200: { perPage: 3 }, // On screens wider than 1200px, display 3 cards per slide
-              768: { perPage: 2 }, // On screens wider than 768px, display 2 cards per slide
+              1200: { perPage: 3 },
+              768: { perPage: 2 },
             },
           }}>
           {vegetarian?.map((elem) => {
@@ -62,10 +57,11 @@ function Vegetarian() {
                       <div
                         style={{ overflow: "hidden" }}
                         className="recipe-slider-img-cont">
-                        <img
-                          alt={elem.title}
+                        <LazyLoadImage
                           src={elem.image}
-                          onError={addImageFallback}
+                          placeholderSrc={fallback}
+                          effect="blur"
+                          alt={elem.title}
                         />
                       </div>
                     }>

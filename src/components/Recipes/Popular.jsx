@@ -2,18 +2,17 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typography, Card, Divider } from "antd";
 
-import fallback from "../../assets/fallback.jpg";
-
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-const { Paragraph, Title } = Typography;
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import fallback from "../../assets/fallback.jpg";
 
-const addImageFallback = (event) => {
-  event.currentTarget.src = fallback;
-};
+const { Paragraph, Title } = Typography;
 
 function Popular() {
   const [popular, setPopular] = useState([]);
+
   useEffect(() => {
     getPopular();
   }, []);
@@ -66,10 +65,13 @@ function Popular() {
                     hoverable
                     cover={
                       <div style={{ overflow: "hidden" }}>
-                        <img
+                        <LazyLoadImage
                           alt={elem.title}
-                          onError={addImageFallback}
+                          effect="blur"
+                          height="100%"
+                          placeholderSrc={fallback}
                           src={elem.image}
+                          width="100%"
                         />
                       </div>
                     }>

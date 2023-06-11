@@ -57,6 +57,18 @@ const NavBar = () => {
       icon: <FormOutlined />,
       link: "/contact",
     },
+    {
+      key: "5",
+      title: "Register",
+      icon: <FormOutlined />,
+      link: "/register",
+    },
+    {
+      key: "6",
+      title: "Login",
+      icon: <FormOutlined />,
+      link: "/login",
+    },
   ];
 
   return (

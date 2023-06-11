@@ -9,7 +9,9 @@
 
   /* //theme */
 }
-
+.logo-cont img{
+  max-width: 6vw;
+}
 .container {
   height: 100%;
 
@@ -161,8 +163,8 @@
 }
 
 .carousel-img {
-  width: 99%;
-  max-height: 90vh;
+  width: 98vw;
+  max-height: 100vh;
   object-fit: cover;
 }
 .carousel-container {

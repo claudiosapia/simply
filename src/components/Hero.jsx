@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { Menu, Avatar } from "antd";
 import icon from "../assets/logo.png";
 import CarouselBanner from "./CarouselBanner";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+import fallback from "../assets/fallback.jpg";
 import {
   ShoppingOutlined,
   ReadOutlined,
@@ -85,14 +89,17 @@ const Hero = () => {
       <section className="mid-section d-flex flex-column justify-content-center align-items-center">
         <div className="home-top-cont d-flex align-items-center">
           <div className="logo-cont">
-            <Avatar
-              size={{ xs: 9, sm: 24, md: 28, lg: 38, xl: 100, xxl: 56 }}
+            <LazyLoadImage
               src={icon}
-              onLoad={handleImageLoad}
+              placeholderSrc={fallback}
+              effect="blur"
+              size={{ xs: 9, sm: 24, md: 28, lg: 10, xl: 100, xxl: 56 }}
+              onLoad={() => setImageLoaded(true)}
               alt="simply-logo"
+              wrapperClassName="logo-cont"
             />
             {!imageLoaded && (
-              <div className="spinner-container">
+              <div className={`spinner-container ${imageLoaded ? "hide" : ""}`}>
                 <div className="spinner"></div>
               </div>
             )}
