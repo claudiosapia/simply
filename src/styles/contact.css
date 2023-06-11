@@ -71,10 +71,9 @@
   background-color: #0077be;
   border-color: #204e4a;
   border-radius: 10px;
-  padding: 10px 30px;
+
   font-size: 16px;
   font-weight: bold;
-  margin-top: 20px;
 }
 
 .ant-btn-primary:hover,
