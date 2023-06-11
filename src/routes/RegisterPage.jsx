@@ -82,9 +82,9 @@ const RegisterPage = () => {
           <Form.Item
             name="remember"
             valuePropName="checked">
-            <Checkbox>
-              I have read and agree to the <a>terms and conditions</a>
-            </Checkbox>
+            {/* <Checkbox>
+              I have read and agree to the <a href="">terms and conditions</a>
+            </Checkbox> */}
           </Form.Item>
 
           <Form.Item>
